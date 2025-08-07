@@ -1,8 +1,4 @@
 model Kibble_system
-  parameter Modelica.Units.SI.Length ampli0 =1;
-  parameter Modelica.Units.SI.Frequency freq0 = 1;
-  parameter Modelica.Units.SI.Length coil_h0 = 1;
-  parameter Modelica.Units.SI.Length coil_d0 = 1;
   Coil Spule annotation(
     Placement(transformation(origin = {16, 0}, extent = {{-10, -10}, {10, 10}})));
   Modelica.Electrical.Analog.Basic.Ground GRD annotation(

@@ -1,19 +1,37 @@
-model FluxGenerator
+// Class FluxGenerator 
+model FluxGenerator "Source of magnetic flux through a coil of given geometry. B field ist fix in space. A coil with a given geometry moves in space. The mouvement is described by a function 
+Currently there are two velocities implemented [constant and sinusoidal]."
 
+// functions returning a position as function of time
+//
+// -> constant velocity
   function displ_const_vel "returns a position for a constant velocity mouvement"
     input Modelica.Units.SI.Time x;
     input Modelica.Units.SI.Length ampli;
     input Modelica.Units.SI.Frequency freq;
-    
+      
     output Modelica.Units.SI.Length position;
-    
+      
     protected
-      Real t_prime = mod(x,1/freq);
-  algorithm
-     position := if ((t_prime < (1/(2*freq))) and (t_prime > 0)) then ampli * (4 * t_prime * freq - 1) else ampli * (3 - (4 * t_prime * freq));
-  
+        Real t_prime = mod(x,1/freq);
+    algorithm
+       position := if ((t_prime < (1/(2*freq))) and (t_prime >= 0)) then ampli * (4 * t_prime * freq - 1) else ampli * (3 - (4 * t_prime * freq));
+    
   end displ_const_vel;
+// -> sinusoidal velocity
+  function displ_sin_vel "returns a position for a sinusoidal velocity mouvement"
+    input Modelica.Units.SI.Time x;
+    input Modelica.Units.SI.Length ampli;
+    input Modelica.Units.SI.Frequency freq;
+      
+    output Modelica.Units.SI.Length position;
+    algorithm
+       position := ampli* cos(2*Modelica.Constants.pi*freq*x);
 
+  end displ_sin_vel;
+
+
+// function calculating the magnetic flux for a given position
   function MagneticFlux "Returns the magnetic flux for a coil that is positioned in a flux density"
     input Modelica.Units.SI.Length pos_z;
     input Modelica.Units.SI.Length coil_heigth;
@@ -32,6 +50,10 @@ model FluxGenerator
       uses(Modelica(version = "4.0.0")));
   end MagneticFlux;
 
+
+//
+// begin definition of class FluxGenerator
+// ***************************************
 
   parameter Real ampli=1;
   parameter Real freq=1;
