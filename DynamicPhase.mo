@@ -22,6 +22,8 @@ equation
     Line(points = {{46, -22}, {66, -22}, {66, -2}, {40, -2}}, color = {0, 0, 255}));
   connect(V_sensor.n, GRD.p) annotation(
     Line(points = {{46, -22}, {46, -38}}, color = {0, 0, 255}));
+  connect(GRD.p, Coil01.aux_a) annotation(
+    Line(points = {{46, -38}, {76, -38}, {76, 4}, {50, 4}}, color = {0, 0, 255}));
   annotation(
     uses(Modelica(version = "4.0.0")),experiment(StartTime=0,StopTime=20,Interval=0.001),
   Diagram(graphics = {Text(origin = {-59, 63}, extent = {{-33, 5}, {33, -5}}, textString = "Dynamic phase", fontSize = 18), Text(origin = {-30, 84}, extent = {{-54, 10}, {54, -10}}, textString = "Kibble Balance Project", fontSize = 26, textStyle = {TextStyle.Bold})}));
