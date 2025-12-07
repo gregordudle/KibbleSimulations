@@ -18,5 +18,6 @@ equation
   annotation(
     uses(Modelica(version = "4.0.0")),
     Diagram(graphics = {Rectangle(extent = {{-68, 60}, {68, -60}}), Line(origin = {0, 9.6465}, points = {{-60, -9.64645}, {-60, -9.64645}, {-40, 10.3536}, {-20, -9.64645}, {0, 10.3536}, {20, -9.64645}, {40, 10.3536}, {60, -9.64645}, {60, -9.64645}}), Text(origin = {4, 78}, extent = {{-46, 12}, {46, -12}}, textString = "%name")}),
-    Icon(graphics = {Rectangle(extent = {{-68, 60}, {68, -60}}), Line(origin = {0, 9.64645}, points = {{-60, -9.64645}, {-60, -9.64645}, {-40, 10.3536}, {-20, -9.64645}, {0, 10.3536}, {20, -9.64645}, {40, 10.3536}, {60, -9.64645}, {60, -9.64645}}), Text(origin = {0, 82}, textColor = {0, 0, 255}, extent = {{-54, 12}, {54, -12}}, textString = "%name")}));
+    Icon(graphics = {Rectangle(extent = {{-68, 60}, {68, -60}}), Line(origin = {0, 9.64645}, points = {{-60, -9.64645}, {-60, -9.64645}, {-40, 10.3536}, {-20, -9.64645}, {0, 10.3536}, {20, -9.64645}, {40, 10.3536}, {60, -9.64645}, {60, -9.64645}}), Text(origin = {0, 82}, textColor = {0, 0, 255}, extent = {{-54, 12}, {54, -12}}, textString = "%name")}),
+  Documentation(info = "<html><head></head><body></body></html>"));
 end triangular_pos;
