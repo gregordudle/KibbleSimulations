@@ -1,9 +1,9 @@
 model DynamicPhaseV03
   Modelica.Electrical.Analog.Basic.Ground GRD annotation(
     Placement(transformation(origin = {58, -32}, extent = {{-10, -10}, {10, 10}})));
-  BIPMcoil coil(fileName = fileName) annotation(
+  BIPMcoil coil(tableFileName = magTableFileName) annotation(
     Placement(transformation(origin = {28, 0}, extent = {{-15, -15}, {15, 15}})));
-  parameter String fileName = "C:/Users/gregor.dudle/OneDrive - OST/aFE/2024_BIPM_Kibble/Simulations/Modelica_Work/Components/BIPM_MagneticField/BIPM_magnetic_field_02.csv";
+  parameter String magTableFileName = "C:/Users/gregor.dudle/OneDrive - OST/aFE/2026_Kibble/Modelica_Work/Components/BIPM_MagneticField/BIPM_magnetic_field_02.csv";
   triangular_pos x_pos_driver annotation(
     Placement(transformation(origin = {-20, 0}, extent = {{-10, -10}, {10, 10}})));
 equation
