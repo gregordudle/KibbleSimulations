@@ -1,0 +1,8 @@
+{
+    "name": "DynamicPhaseV03",
+    "phase":"dynamic",
+    "main":"DynamicPhaseV03",
+    "coil": "BIPM_coil_2V1",
+    "magnetic_field":"BIPM_magnetic_field_02",
+    "motion_driver":"triangular_position"
+}

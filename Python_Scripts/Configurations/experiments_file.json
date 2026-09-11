@@ -1,0 +1,7 @@
+{
+    "name": "experiment_001",
+    "configuration":"config_dynamic_V03",
+    "amplitude":0.004,
+    "offset":0.0,
+    "period":20
+}
