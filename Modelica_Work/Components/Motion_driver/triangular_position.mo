@@ -8,6 +8,7 @@ model triangular_pos "triangular_pos"
 protected
   Real phase;
 public
+
 equation
   phase = mod(time, period);
   if phase < period/2 then

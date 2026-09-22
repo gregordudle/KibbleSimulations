@@ -1,8 +1,5 @@
-{
-    "1":"DynamicPhaseV03",
-    "2":"StaticPhaseV01",
-    "3":"DynamicPhaseV03",
-    "4":"StaticPhaseV01", 
-    "5":"DynamicPhaseV03",
-    "6":"StaticPhaseV01"
-}
+[
+    "DynamicPhaseV03",
+    "StaticPhaseV01",
+    "DynamicPhaseV04"
+]
