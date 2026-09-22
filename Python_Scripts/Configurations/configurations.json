@@ -42,7 +42,11 @@
         "main":"StaticPhaseV01",
         "coil": "BIPM_coil_2V3",
         "magnetic_field":"BIPM_magnetic_field_02",
-        "current_driver":"current_driver"
-    }
+        "current_driver":"current_driver",
+        "simulation":{
+            "stopTime":100,
+            "numberOfIntervals":1000
+        }
+}
 }
     

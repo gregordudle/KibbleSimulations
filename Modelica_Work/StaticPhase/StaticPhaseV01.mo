@@ -1,10 +1,9 @@
 model StaticPhaseV01
   Modelica.Electrical.Analog.Basic.Ground GRD annotation(
     Placement(transformation(origin = {34, -32}, extent = {{-10, -10}, {10, 10}})));
-  BIPMcoil coil(tableFileName = magTableFileName) annotation(
+  BIPMcoil coil(tableFileName = magTableFileName, B_l = -400) annotation(
     Placement(transformation(origin = {28, 0}, extent = {{-15, -15}, {15, 15}})));
-//  parameter String magTableFileName = "C:/Users/gregor.dudle/OneDrive - OST/aFE/2026_Kibble/Modelica_Work/Components/BIPM_MagneticField/BIPM_magnetic_field_02.csv";
-BIPMcoil coil(B_l = -400);
+  parameter String magTableFileName = "C:/Users/gregor.dudle/OneDrive - OST/aFE/2026_Kibble/Modelica_Work/Components/BIPM_MagneticField/BIPM_magnetic_field_02.csv";
   Modelica.Electrical.Analog.Sources.ConstantCurrent CurrentSource(I = 0.1)  annotation(
     Placement(transformation(origin = {30, -46}, extent = {{-10, -10}, {10, 10}})));
   Modelica.Mechanics.Translational.Sensors.ForceSensor ForceSensor annotation(
