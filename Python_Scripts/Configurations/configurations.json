@@ -1,5 +1,5 @@
 {
-    "DynamicPhaseV03":
+    "DynamicPhaseConf03":
     {
         "class":"DynamicPhaseC01",
         "phase":"dynamic",
@@ -17,7 +17,7 @@
             "numberOfIntervals":5000
         }
    },
-   "DynamicPhaseV04":
+   "DynamicPhaseConf04":
     {
         "class":"DynamicPhaseC01",
         "phase":"dynamic",
@@ -35,7 +35,25 @@
             "numberOfIntervals":1000
         }
     },
-    "StaticPhaseV01":
+    "DynamicPhaseConf05":
+    {
+        "class":"DynamicPhaseC01",
+        "phase":"dynamic",
+        "main":"DynamicPhaseM03",
+        "coil": "BIPM_coil_2V4",
+        "magnetic_field":"BIPM_magnetic_field_01",
+        "motion":{
+            "driver":"triangular_position",
+            "amplitude":0.004,
+            "offset":0,
+            "period":25
+        },
+        "simulation":{
+            "stopTime":100,
+            "numberOfIntervals":1000
+        }
+    },
+    "StaticPhaseConf01":
     {
         "class":"StaticPhaseC01",
         "phase":"static",
@@ -57,6 +75,53 @@
             "stopTime":100,
             "numberOfIntervals":1000
         }
+    },
+    "StaticPhaseConf02":
+    {
+        "class":"StaticPhaseC01",
+        "phase":"static",
+        "main":"StaticPhaseM03",
+        "coil": "BIPM_coil_2V4",
+        "weight_driver" :{
+            "period": 30,
+            "amplitude": 9.81,
+            "rising": 0.2,
+            "width": 14.8,
+            "falling": 0.2
+        },
+        "PID" :{
+            "k": 0.1,
+            "Td": 1,
+            "Ti": 1
+        },
+        "simulation":{
+            "stopTime":100,
+            "numberOfIntervals":1000
+        }
+    },
+    "StaticPhaseConf03":
+    {
+        "class":"StaticPhaseC01",
+        "phase":"static",
+        "main":"StaticPhaseM03",
+        "coil": "BIPM_coil_2V4",
+        "weight_driver" :{
+            "period": 30,
+            "amplitude": 9.81,
+            "rising": 0.2,
+            "width": 14.8,
+            "falling": 0.2
+        },
+        "PID" :{
+            "k": 0.1,
+            "Td": 1,
+            "Ti": 3
+        },
+        "simulation":{
+            "stopTime":100,
+            "numberOfIntervals":1000
+        }
+    }
 }
-}
+
     
