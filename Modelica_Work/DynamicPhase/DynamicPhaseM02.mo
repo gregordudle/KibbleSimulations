@@ -1,4 +1,4 @@
-model DynamicPhaseV02
+model DynamicPhaseM02
   Modelica.Blocks.Sources.Pulse vel_driver(amplitude = 0.002, offset = -0.001, period = 20, startTime = 0) annotation(
     Placement(transformation(origin = {-70, 0}, extent = {{-10, -10}, {10, 10}})));
   Modelica.Mechanics.Translational.Sources.Speed Motor(exact = true, s(start = -0.005)) annotation(
@@ -20,4 +20,4 @@ equation
   annotation(
     uses(Modelica(version = "4.0.0")),
   Documentation(info = "<html><head></head><body><br></body></html>"));
-end DynamicPhaseV02;
+end DynamicPhaseM02;

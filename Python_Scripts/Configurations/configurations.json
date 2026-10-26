@@ -1,9 +1,9 @@
 {
     "DynamicPhaseV03":
     {
-        "name":"DynamicPhaseV03",
+        "class":"DynamicPhaseC01",
         "phase":"dynamic",
-        "main":"DynamicPhaseV03",
+        "main":"DynamicPhaseM03",
         "coil": "BIPM_coil_2V3",
         "magnetic_field":"BIPM_magnetic_field_02",
         "motion":{
@@ -19,9 +19,9 @@
    },
    "DynamicPhaseV04":
     {
-        "name":"DynamicPhaseV04",
+        "class":"DynamicPhaseC01",
         "phase":"dynamic",
-        "main":"DynamicPhaseV03",
+        "main":"DynamicPhaseM03",
         "coil": "BIPM_coil_2V3",
         "magnetic_field":"BIPM_magnetic_field_01",
         "motion":{
@@ -37,12 +37,22 @@
     },
     "StaticPhaseV01":
     {
-        "name":"StaticPhaseV01",
+        "class":"StaticPhaseC01",
         "phase":"static",
-        "main":"StaticPhaseV01",
-        "coil": "BIPM_coil_2V3",
-        "magnetic_field":"BIPM_magnetic_field_02",
-        "current_driver":"current_driver",
+        "main":"StaticPhaseM03",
+        "coil": "BIPM_coil_2V4",
+        "weight_driver" :{
+            "period": 20,
+            "amplitude": 9.81,
+            "rising": 0.2,
+            "width": 9.8,
+            "falling": 0.2
+        },
+        "PID" :{
+            "k": 0.1,
+            "Td": 1,
+            "Ti": 1
+        },
         "simulation":{
             "stopTime":100,
             "numberOfIntervals":1000

@@ -1,4 +1,4 @@
-model DynamicPhaseV03
+model DynamicPhaseM03
   Modelica.Electrical.Analog.Basic.Ground GRD annotation(
     Placement(transformation(origin = {58, -32}, extent = {{-10, -10}, {10, 10}})));
   parameter String magTableFileName = "C:/Users/gregor.dudle/OneDrive - OST/aFE/2026_Kibble/Modelica_Work/Components/BIPM_MagneticField/BIPM_magnetic_field_02.csv";
@@ -22,4 +22,4 @@ equation
     uses(Modelica(version = "4.0.0")),
   Documentation(info = "<html><head></head><body><div><br></div><div>Experiment to simulate the dynamic phase of the Kibble Balance experiment</div><div>Relies on the following components<h3>Driver</h3></div><div><br></div><div><br></div><div><br></div></body></html>", __OpenModelica_infoHeader = "<html><head></head><body><b>Kibble Balance Simulation</b><div><b><br></b></div></body></html>", revisions = "<html><head></head><body>Version 3<div><br></div></body></html>"),
   Diagram(graphics = {Text(origin = {1, 56}, extent = {{-33, 14}, {33, -14}}, textString = "Kibble Balance", fontSize = 24, textStyle = {TextStyle.Bold, TextStyle.UnderLine}), Text(origin = {1, 47}, extent = {{-27, 3}, {27, -3}}, textString = "Dynamic phase", fontSize = 12, horizontalAlignment = TextAlignment.Left)}));
-end DynamicPhaseV03;
+end DynamicPhaseM03;
